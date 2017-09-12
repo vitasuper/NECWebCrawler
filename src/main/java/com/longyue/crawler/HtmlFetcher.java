@@ -8,7 +8,7 @@ import java.io.IOException;
 public class HtmlFetcher {
 
     public String fetch(String url) {
-        if (url == null || url.length() == 0) {
+        if (url == null || url.length() == 0 || !(url.startsWith("http://") || url.startsWith("https://"))) {
             return null;
         }
         try {
